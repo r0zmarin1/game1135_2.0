@@ -25,7 +25,8 @@ namespace game1135_2._0
         {
             foreach (CreatureAction action in Actions)
             {
-                //var action1 = action.Title;
+                var action1 = action.Title;
+                Console.WriteLine(action1);
                 //перебираем коллекцию Actions, выводим для каждого действия значение свойства Title.
             }
         }

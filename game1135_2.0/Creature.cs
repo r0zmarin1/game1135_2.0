@@ -11,7 +11,7 @@ namespace game1135_2._0
         public CreatureClass Stats { get; set; }
 
         public bool IsDead { get; set; }
-
+        Random random = new Random();
         public void TakeDamage(int damage)
         {
             Stats.TakeDamage(damage);
@@ -24,6 +24,12 @@ namespace game1135_2._0
         {
             IsDead = true;
             Console.WriteLine("вы умерли");
+        }
+        public abstract void RunAction(Room room);
+
+        public void RandomSpeed()
+        {
+            Stats.Speed = random.Next(1, 10);
         }
     }
 }

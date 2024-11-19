@@ -10,7 +10,15 @@ namespace game1135_2._0
     {
         public Mage() 
         {
-            //В конструкторе укажите ему CurrentHP, MaxHP, Damage, Armor
+            LightAttackTarget lightAttackTarget = new LightAttackTarget();
+            Actions.Add(lightAttackTarget);
+            MultiAttackTarget multiAttackTarget = new MultiAttackTarget();
+            Actions.Add(multiAttackTarget);
+
+            CurrentHP = 0;
+            MaxHP = 0;
+            Damage = 0;
+            Armor = 0;
         }
     }
 }
