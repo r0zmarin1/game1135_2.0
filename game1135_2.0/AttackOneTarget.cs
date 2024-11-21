@@ -14,7 +14,7 @@ namespace game1135_2._0
     {
         public LightAttackTarget()
         {
-            Title = "Легкая атака";
+            Title = "0) Легкая атака";
         }
 
         Random random = new Random();
@@ -26,7 +26,7 @@ namespace game1135_2._0
             {
                 foreach(var enemy in room.Enemies)
                 {
-                    Console.WriteLine($"враг {enemy.Stats.Name}, статы - {enemy.Stats}");
+                    Console.WriteLine($"враг {enemy.Stats.Name}, здоровье  - {enemy.Stats.CurrentHP}, броня  - {enemy.Stats.Armor}");
                     int rnd = random.Next(1, 10);
                     int damage = rnd + actor.Stats.Damage;
                     enemy.TakeDamage(damage);

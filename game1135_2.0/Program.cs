@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
            Player player = new Player();
-            while (!player.IsDead)
+            while (player.IsDead == false)
             {
                 Room room = new Room(player);
                 room.RunBattle();   

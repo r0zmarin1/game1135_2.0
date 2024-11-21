@@ -12,7 +12,7 @@ namespace game1135_2._0
         {
             public MultiAttackTarget()
             {
-                Title = "Aтака по группе";
+                Title = "1) Aтака по группе";
             }
 
             Random random = new Random();
@@ -25,11 +25,11 @@ namespace game1135_2._0
                     foreach (var enemy in room.Enemies)
                     {
                         Targets.Add(enemy);
-                        Console.WriteLine($"враг {enemy.Stats.Name}, статы - {enemy.Stats}");
+                        Console.WriteLine($"враг {enemy.Stats.Name}, здоровье  - {enemy.Stats.CurrentHP}, броня  - {enemy.Stats.Armor}");
                         int rnd = random.Next(1, 15);
-                        int damage = rnd + actor.Stats.Damage;
+                        int damage = rnd + (actor.Stats.Damage/2);
                         enemy.TakeDamage(damage);
-                        Console.WriteLine($"Игрок {actor.Stats.Name} БЬЕТ {enemy.Stats.Name} С СИЛОЙ {damage}");
+                        Console.WriteLine($"Альтушка {actor.Stats.Name} БЬЕТ {enemy.Stats.Name} С СИЛОЙ {damage}");
                     }
                 }
                 else

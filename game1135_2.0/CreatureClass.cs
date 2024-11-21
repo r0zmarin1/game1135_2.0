@@ -14,11 +14,13 @@ namespace game1135_2._0
         public int CurrentHP { get; set; }
         public int MaxHP { get; set; }
         public int Speed { get; set; }
-        public List<CreatureAction> Actions { get; set; }
+        public List<CreatureAction> Actions { get; set; } = new List<CreatureAction>();
 
         internal void TakeDamage(int damage)
         {
-            CurrentHP = CurrentHP - (damage - Armor);
+            int one_attack_damage = CurrentHP + Armor;
+            CurrentHP = one_attack_damage - damage;
+           
         }
 
         public void PrintAction()
@@ -27,7 +29,6 @@ namespace game1135_2._0
             {
                 var action1 = action.Title;
                 Console.WriteLine(action1);
-                //перебираем коллекцию Actions, выводим для каждого действия значение свойства Title.
             }
         }
     }

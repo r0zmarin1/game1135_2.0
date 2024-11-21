@@ -9,16 +9,17 @@ namespace game1135_2._0
     public abstract class Creature
     {
         public CreatureClass Stats { get; set; }
-
+        protected ConsoleColor color;
         public bool IsDead { get; set; }
         Random random = new Random();
         public void TakeDamage(int damage)
         {
-            Stats.TakeDamage(damage);
             if (Stats.CurrentHP <= 0)
             {
                 Death();
             }
+            Stats.TakeDamage(damage);
+            
         }
         private void Death()
         {

@@ -8,6 +8,7 @@ namespace game1135_2._0
 {
     public class Mage : CreatureClass
     {
+        
         public Mage() 
         {
             LightAttackTarget lightAttackTarget = new LightAttackTarget();
@@ -15,10 +16,10 @@ namespace game1135_2._0
             MultiAttackTarget multiAttackTarget = new MultiAttackTarget();
             Actions.Add(multiAttackTarget);
 
-            CurrentHP = 0;
-            MaxHP = 0;
-            Damage = 0;
-            Armor = 0;
+            CurrentHP = 25;
+            MaxHP = 25;
+            Damage = 3;
+            Armor = 3;
         }
     }
 }

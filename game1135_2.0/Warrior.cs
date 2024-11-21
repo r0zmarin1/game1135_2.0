@@ -15,10 +15,10 @@ namespace game1135_2._0
             MultiAttackTarget multiAttackTarget = new MultiAttackTarget();
             Actions.Add(multiAttackTarget);
 
-            CurrentHP = 0;
-            MaxHP = 0;
-            Damage = 0;
-            Armor = 0;
+            CurrentHP = 30;
+            MaxHP = 30;
+            Damage = 4;
+            Armor = 5;
         }
     }
 }
